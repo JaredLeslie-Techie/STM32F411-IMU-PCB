@@ -1,12 +1,12 @@
 # STM32F411 IMU PCB Design
 
-A four-layer PCB design in Altium Designer built around the **STM32F411CEU6** microcontroller and an **MPU-6050** inertial measurement unit (IMU). The repository contains the editable Altium design, STM32CubeMX pin configuration, bill of materials, Gerber X2 exports, and images generated from the design files.
+A four-layer PCB design in Altium Designer built around the **STM32F411CEU6** microcontroller and an **MPU-6050** inertial measurement unit (IMU). The repository contains the editable Altium design, STM32CubeMX pin configuration, bill of materials, Gerber X2 exports, and design visualizations.
 
 > **Project status:** Designed only. This board has **not** been manufactured, assembled, powered, or tested. The included Gerbers are design exports for review, not a validated fabrication release. The saved design rule check reports 153 unwaived violations; see [Design status](DESIGN_STATUS.md) before considering fabrication.
 
-![Top-side PCB preview generated from the supplied Gerber layers; no components are mounted](images/board_top.png)
+![Altium Designer 3D view of the STM32F411 IMU PCB showing component placement](images/board_top_altium_3d.png)
 
-*Top-side design preview generated from the Gerber exports. This is not a photograph of a manufactured PCB, and components are not shown.*
+*Altium Designer 3D view showing the intended component placement. This is a CAD rendering, not a photograph of a manufactured or assembled board. See the [unpopulated top-side view](images/board_top.png) for the Gerber-derived artwork.*
 
 ## Design overview
 
@@ -29,7 +29,7 @@ The `.ioc` file also assigns PB8 as `IMU_INT` and PB13 as a GPIO output named `L
 
 ![Small overview preview extracted from the supplied Altium schematic](images/schematic_overview.png)
 
-*The schematic thumbnail is a low-resolution preview saved with the Altium project. Open the `.SchDoc` file in Altium for readable schematic details. All board images are documentation previews derived from the supplied design exports.*
+*The schematic thumbnail is a low-resolution preview saved with the Altium project. Open the `.SchDoc` file in Altium for readable schematic details. The top and bottom flat board previews are derived from the supplied Gerber exports.*
 
 ## Files
 
@@ -39,7 +39,7 @@ The `.ioc` file also assigns PB8 as `IMU_INT` and PB13 as a GPIO output named `L
 | `AltiumSTM32_Schematic.SchDoc` | Editable schematic |
 | `AltiumSTM32_PCB.PcbDoc` | Editable PCB layout |
 | `AltiumSTM32.ioc` | STM32CubeMX pin and peripheral configuration |
-| `images/` | Top, bottom, and copper board previews plus schematic thumbnail |
+| `images/` | Altium 3D screenshot, flat top and bottom Gerber previews, top copper plot, and schematic thumbnail |
 | `bom/Bill_Of_Materials.csv` | Supplied component list |
 | `gerbers/` | Supplied Gerber X2 layer and drill exports |
 | `reports/Design_Rule_Check_2026-09-13.drc` | Saved DRC report with its local file path removed |
@@ -52,3 +52,7 @@ The `.ioc` file also assigns PB8 as `IMU_INT` and PB13 as a GPIO output named `L
 3. If you modify the design or plan to manufacture it, resolve the remaining design rule violations, verify the schematic and footprints, and regenerate and inspect all manufacturing outputs.
 
 See [Design status](DESIGN_STATUS.md) for the saved DRC findings. Physical function and fabrication suitability have not been verified.
+
+## Credits
+
+The original Altium project references schematic and footprint libraries named for **Phil's Lab**. Thanks to [Phil's Lab (Philip Salmony)](https://github.com/pms67) for sharing PCB design resources. The referenced external library files were not part of the supplied project archive and are not included in this repository.
