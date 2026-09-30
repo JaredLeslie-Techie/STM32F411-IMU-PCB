@@ -1,0 +1,9 @@
+# Altium-generated local caches, history and output folders.
+History/
+__Previews/
+Project Logs for */
+Project Outputs for */
+*.PrjPcbStructure
+*.SchDocPreview
+*.PcbDocPreview
+*.Cam
